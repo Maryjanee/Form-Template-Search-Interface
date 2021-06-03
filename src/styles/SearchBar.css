@@ -1,0 +1,11 @@
+.search-templates {
+  width: 15rem;
+  padding: .8rem;
+  background-image: url('../assets/search.svg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 1rem;
+  font-size: .9rem;
+  border: 1px solid #8F8B8B;
+  outline: none;
+}
