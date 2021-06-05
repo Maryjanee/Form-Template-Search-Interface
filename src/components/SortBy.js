@@ -1,18 +1,43 @@
-import React from 'react'
-import Filter from './Filter'
+import React from "react";
+import Filter from "./Filter";
+
+// const filter = {
+//   Category: {
+//     default: "All",
+//     name: "Category",
+//     value: [],
+//   },
+//   Order: {
+//     default: "Default",
+//     name: "Order",
+//     value: [],
+//   },
+//   Date: {
+//     default: "Default",
+//     name: "Date",
+//     value: [],
+//   },
+// };
 
 const SortBy = () => {
-  const categoryFilter = ["Category",["All", "Education", "E-commerce" ,"Health"]];
-  const orderFilter = ["Order",["Default", "Ascending","Descending"]];
-  const dateFilter = ["Date",["Default", "Ascending","Descending"]];
-    
+  const categoryFilter = [
+    "Category",
+    ["All", "Education", "E-commerce", "Health"],
+  ];
+  const orderFilter = ["Order", ["Default", "Ascending", "Descending"]];
+  const dateFilter = ["Date", ["Default", "Ascending", "Descending"]];
+
   return (
-    <div className="filter-container">
-        <Filter filterType={categoryFilter}/>
-        <Filter filterType={orderFilter}/>
-        <Filter filterType={dateFilter}/>
+    <div>
+      
+      <div className="filter-container ">
+        <p>Sort By:</p>
+        <Filter filterType={categoryFilter} />
+        <Filter filterType={orderFilter} />
+        <Filter filterType={dateFilter} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default SortBy;
