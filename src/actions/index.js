@@ -1,40 +1,56 @@
-import {GET_TEMPLATES_REQUEST,
+import {
+  GET_TEMPLATES_REQUEST,
   GET_TEMPLATES_FULFILLED,
-  GET_TEMPLATES_ERROR, FILTER_TEMPLATES_BY_CATEGORY,
-  FILTER_TEMPLATES_BY_ORDER,FILTER_TEMPLATES_BY_DATE, SEARCH_TEMPLATES_BY_CATEGORIES} from '../constants';
+  GET_TEMPLATES_ERROR,
+  FILTER_TEMPLATES_BY_CATEGORY,
+  FILTER_TEMPLATES_BY_ORDER,
+  FILTER_TEMPLATES_BY_DATE,
+  SEARCH_TEMPLATES_BY_CATEGORIES,
+} from "../constants";
+import { handleError } from "../services/axios";
 
+import TemplateService from "../services/template-service";
 
 export const getTemplatesRequest = () => ({
-  type:GET_TEMPLATES_REQUEST
-})
+  type: GET_TEMPLATES_REQUEST,
+});
 
-export const getTemplatesFulfilled = templates => ({
-  type:GET_TEMPLATES_FULFILLED,
-  payload: templates
-})
+export const getTemplatesFulfilled = (templates) => ({
+  type: GET_TEMPLATES_FULFILLED,
+  payload: templates,
+});
 
 export const getTemplatesError = (error) => ({
-  type:GET_TEMPLATES_ERROR,
-  payload: error
-})
+  type: GET_TEMPLATES_ERROR,
+  payload: error,
+});
 
-export const filterTemplatesByCategory = (category) =>({
-  type:FILTER_TEMPLATES_BY_CATEGORY,
-  payload:category
-})
+export const filterTemplatesByCategory = (category) => ({
+  type: FILTER_TEMPLATES_BY_CATEGORY,
+  payload: category,
+});
 
-export const filterTemplatesByOrder = (order) =>({
-  type:FILTER_TEMPLATES_BY_ORDER,
-  payload:order
-})
+export const filterTemplatesByOrder = (order) => ({
+  type: FILTER_TEMPLATES_BY_ORDER,
+  payload: order,
+});
 
-export const filterTemplatesByDate = (date) =>({
-  type:FILTER_TEMPLATES_BY_DATE,
-  payload:date
-})
+export const filterTemplatesByDate = (date) => ({
+  type: FILTER_TEMPLATES_BY_DATE,
+  payload: date,
+});
 
-export const searchTemplatesCategory = (category) =>({
-  type:SEARCH_TEMPLATES_BY_CATEGORIES,
-  payload:category
-})
+export const searchTemplatesCategory = (category) => ({
+  type: SEARCH_TEMPLATES_BY_CATEGORIES,
+  payload: category,
+});
 
+export const fetchTemplates = () => async (dispatch) => {
+  dispatch(getTemplatesRequest());
+  try {
+    const template = await TemplateService.getTemplates();
+    dispatch(getTemplatesFulfilled(template));
+  } catch (error) {
+    dispatch(getTemplatesError(handleError(error)));
+  }
+};
