@@ -1,0 +1,19 @@
+.search-templates {
+  width: 100%;
+  padding: .8rem;
+  background-image: url("../assets/search.svg");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 1rem;
+  font-size: .9rem;
+  border: 1px solid #8F8B8B;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .search-templates {
+    border: 1px solid green;
+    width: 20rem;
+  }
+}
+/*# sourceMappingURL=SearchBar.css.map */
