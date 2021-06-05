@@ -1,0 +1,50 @@
+#templates-container{
+
+}
+.templates-header{
+  justify-content: space-between;
+  p{
+    font-size: .8rem;
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.all-templates-container{
+  grid-template-columns: repeat(auto-fit, minmax(358px, 1fr));
+  grid-gap:2rem;
+  grid-auto-flow:dense;
+  margin:1.5rem 0;
+
+  .template-card{
+    border:1px solid black;
+    
+    *{
+      padding:0 1.5rem;
+    }
+    
+    h3{
+      font-size:1.5rem;
+      line-height: 2.3rem;
+      margin-bottom: 1rem;
+      padding-top: 1.5rem;
+     
+    }
+    p{
+      font-size: .9rem;
+      margin: 1rem 0 2rem 0;
+    }
+    a{
+      background: #F9F9F9;
+      display: block;
+      width:100%;
+      font-size: .9rem;
+      padding:.8rem 1.5rem;
+      color:#08BD37;
+
+      
+    }
+  }
+
+}

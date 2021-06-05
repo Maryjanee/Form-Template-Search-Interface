@@ -1,0 +1,42 @@
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin: 2rem auto;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+header {
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width:100%;
+
+  }
+}
+
+.icon{
+    width:1rem;
+}
+
+.alert{
+  margin:1rem 0;
+  padding:1.5rem 2.5rem;
+  background: #FFF4EA;
+  justify-content: center;
+  p{
+    font-size: .9rem;
+    margin-left:1rem;
+    
+  }
+
+}
