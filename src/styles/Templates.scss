@@ -1,6 +1,10 @@
-#templates-container{
-
+.center {
+  margin: 3rem auto;
+  width: 10rem;
+  display: block;
+  background: transparent;
 }
+
 .templates-header{
   justify-content: space-between;
   p{
@@ -18,8 +22,9 @@
   margin:1.5rem 0;
 
   .template-card{
-    border:1px solid black;
-    
+  
+    box-shadow: 0px 4px 30px 0px #00000014;
+
     *{
       padding:0 1.5rem;
     }
