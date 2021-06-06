@@ -1,24 +1,6 @@
 import React from "react";
 import Filter from "./Filter";
 
-// const filter = {
-//   Category: {
-//     default: "All",
-//     name: "Category",
-//     value: [],
-//   },
-//   Order: {
-//     default: "Default",
-//     name: "Order",
-//     value: [],
-//   },
-//   Date: {
-//     default: "Default",
-//     name: "Date",
-//     value: [],
-//   },
-// };
-
 const SortBy = () => {
   const categoryFilter = [
     "Category",
