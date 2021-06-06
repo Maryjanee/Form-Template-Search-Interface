@@ -16,10 +16,15 @@ export const templatesReducer = (state = initialState, action) => {
       return { ...state, pending: true };
 
     case GET_TEMPLATES_FULFILLED:
-      return { ...state, templates: action.payload, error: null };
+      return {
+        ...state,
+        pending: false,
+        templates: action.payload,
+        error: null,
+      };
 
     case GET_TEMPLATES_ERROR:
-      return { ...state, error: action.payload };
+      return { ...state, pending: false, error: action.payload };
     default:
       return state;
   }
