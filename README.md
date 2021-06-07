@@ -39,6 +39,6 @@ To get a local copy up and running follow these simple example steps.
 
 - The data being retrieved from the API is a large one and although I created functionality to limit the content being displayed to the user, managing the data in the browser has proven inefficient as the application keeps crashing in development. I have therefore decided to create a server to retrieve the data from the API and also add logic to paginate the resulting data and have it sent to frontend React app in slices and I believe this would go a long way in optimizing the application and make it function properly.
 
-- Once this is sorted, i would go on to add functionality to search through the templates and functionality to sort these templates as specified by the user.
+- Once managing the retrieved data is acheived , i would go on to add functionality to search through the templates and functionality to sort these templates as specified by the user.
 
 - I would also want to work more on styling the app as I have just added only the basic styles to get the app running.
