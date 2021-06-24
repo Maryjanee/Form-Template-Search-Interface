@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const path = require('path');
 const axios = require('axios');
 const express = require('express');
@@ -20,10 +19,7 @@ app.get('/public/task_templates', async (req, res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  // Serve static files
   app.use(express.static(path.join(__dirname, 'build')));
-
-  // Handle react routing
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
