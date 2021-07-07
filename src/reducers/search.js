@@ -7,7 +7,8 @@ export const searchReducer = (state= intialState, action)=> {
      case SEARCH_TEMPLATES_BY_CATEGORIES:
        return {...state, searchQuery: action.payload}
        default:
-         return state;
+         return state
+
    }
 
 }
